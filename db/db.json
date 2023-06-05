@@ -1,14 +1,7 @@
 [
     {
-        "title": "Test Title",
-        "text": "Test text"
-    },
-    {
-        "id": "b0ac",
-        "title": "hello",
-        "text": "world\n"
-    },
-    {
-        "id": "028d"
+        "id": "5e73",
+        "title": "Test Note",
+        "text": "This is the body of the test note, hello!"
     }
 ]

@@ -21,4 +21,14 @@ notes.get("/", (req, res) => {
     readFromFile("./db/db.json").then((dat) => res.json(JSON.parse(dat)));
   });
 
+notes.delete("/:id", (req, res) => {
+    const noteUuid = req.params.id;
+    readFromFile("./db/db.json")
+    .then((data) => {
+        const noteToDel = JSON.parse(data).filter((note) => note.id !== noteUuid);
+
+        writeToFile("./db/db.json", noteToDel);
+    });
+});
+
 module.exports = notes;
