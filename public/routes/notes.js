@@ -25,9 +25,9 @@ notes.delete("/:id", (req, res) => {
     const noteUuid = req.params.id;
     readFromFile("./db/db.json")
     .then((data) => {
-        const noteToDel = JSON.parse(data).filter((note) => note.id !== noteUuid);
+        const notesToSav = JSON.parse(data).filter((note) => note.id !== noteUuid);
 
-        writeToFile("./db/db.json", noteToDel);
+        writeToFile("./db/db.json", notesToSav);
     });
 });
 
